@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .cal-week-li {
+    @apply font-medium;
+  }
+
+  .cal-day-li {
+    @apply cursor-pointer mt-7 z-10;
+  }
+
+  .cal-day-li-before {
+    @apply before:absolute before:content-[''] before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:rounded-lg before:transform before:-translate-x-1/2 before:-translate-y-1/2 bg-tertiary z-0;
+  }
+
+  .cal-ul-li {
+    @apply relative w-[1/7];
+  }
+}
