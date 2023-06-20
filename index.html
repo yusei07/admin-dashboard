@@ -154,64 +154,28 @@
         <!-- calendar -->
         <div class="w-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
           <header class="flex items-center justify-between">
-            <div class="flex justify-center">
-              <span class="mr-4"><i data-feather="chevron-left" class="w-6 h-6 text-tertiary cursor-pointer"></i></span></i></span>
+            <div class="icons flex justify-center">
+              <span id="prev" class="mr-4 select-none"><i data-feather="chevron-left" class="w-6 h-6 text-tertiary cursor-pointer"></i></span></i></span>
             </div>
             <p id="current-date" class="font-medium text-base"></p>
-            <div class="flex justify-center">
-              <span class="ml-4"><i data-feather="chevron-right" class="w-6 h-6 text-tertiary cursor-pointer"></i></span></i></span>
+            <div class="icons flex justify-center">
+              <span id="next" class="ml-4 select-none"><i data-feather="chevron-right" class="w-6 h-6 text-tertiary cursor-pointer"></i></span></i></span>
             </div>
           </header>
           <!-- main cal -->
           <div class="mt-4">
             <!-- weeks -->
             <ul class="flex flex-wrap text-center">
+              <li class="cal-ul-li cal-week-li">Sun</li>
               <li class="cal-ul-li cal-week-li">Mon</li>
               <li class="cal-ul-li cal-week-li">Tue</li>
               <li class="cal-ul-li cal-week-li">Wed</li>
               <li class="cal-ul-li cal-week-li">Thu</li>
               <li class="cal-ul-li cal-week-li">Fri</li>
               <li class="cal-ul-li cal-week-li">Sat</li>
-              <li class="cal-ul-li cal-week-li">Sun</li>
             </ul>
             <!-- days -->
-            <ul class="flex flex-wrap text-center" id="days">
-              <li class="cal-ul-li cal-day-li cal-day-li-before inactive-day">28</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before inactive-day">29</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before inactive-day">30</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before inactive-day">31</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">1</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">2</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">3</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">4</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">5</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">6</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">7</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">8</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">9</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">10</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">11</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">12</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">13</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">14</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">15</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">16</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">17</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">18</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">19</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before active-day">20</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">21</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">22</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">23</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">24</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">25</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">26</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">27</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">28</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">29</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before">30</li>
-              <li class="cal-ul-li cal-day-li cal-day-li-before inactive-day">1</li>
-            </ul>
+            <ul class="days flex flex-wrap text-center"></ul>
           </div>
         </div>
         <!-- notifications -->
@@ -273,7 +237,6 @@
 
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>

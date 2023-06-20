@@ -729,6 +729,12 @@ video {
   cursor: pointer;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -753,6 +759,22 @@ video {
 
 .grid-rows-\[6rem_18rem_1fr\] {
   grid-template-rows: 6rem 18rem 1fr;
+}
+
+.grid-rows-\[2\.8rem_10rem_1fr\] {
+  grid-template-rows: 2.8rem 10rem 1fr;
+}
+
+.grid-rows-\[2\.8rem_15rem_1fr\] {
+  grid-template-rows: 2.8rem 15rem 1fr;
+}
+
+.grid-rows-\[6rem_18rem_25rem\] {
+  grid-template-rows: 6rem 18rem 25rem;
+}
+
+.grid-rows-\[6rem_18rem_20rem\] {
+  grid-template-rows: 6rem 18rem 20rem;
 }
 
 .flex-row {
