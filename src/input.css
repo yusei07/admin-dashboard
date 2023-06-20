@@ -2,20 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [type='checkbox'],
+  [type='radio'] {
+    @apply rounded border-gray-300 text-tertiary focus:ring-indigo-500;
+  }
+}
+
 @layer components {
   .cal-week-li {
     @apply font-medium;
   }
 
   .cal-day-li {
-    @apply cursor-pointer mt-7 z-10;
+    @apply relative cursor-pointer mt-7 z-[1];
   }
 
   .cal-day-li-before {
-    @apply before:absolute before:content-[''] before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:rounded-lg before:transform before:-translate-x-1/2 before:-translate-y-1/2 bg-tertiary z-0;
+    @apply before:absolute before:content-[''] before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:rounded-lg before:transform before:translate-x-[-50%] before:translate-y-[-50%] hover:before:bg-tertiary before:z-[-1];
+  }
+
+  .inactive-day {
+    @apply text-[#aaa];
+  }
+
+  .active-day {
+    @apply before:bg-tertiary text-white;
   }
 
   .cal-ul-li {
-    @apply relative w-[1/7];
+    @apply w-[calc(100%_/_7)];
+  }
+}
+
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-5;
   }
 }
