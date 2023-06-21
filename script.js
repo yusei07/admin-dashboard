@@ -2,12 +2,12 @@
 feather.replace();
 
 // notification toggle
-const checkbox = document.querySelector('#toggle');
-const html = document.querySelector('html');
-
-checkbox.addEventListener('click', () => {
-  checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
-})
+// const checkbox = document.querySelector('#toggle');
+// const html = document.querySelector('html');
+//
+// checkbox.addEventListener('click', () => {
+//   checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+// })
 
 
 // calendar
@@ -81,9 +81,7 @@ const myChart = new Chart(ctx, {
       {
         label: 'All tasks',
         data: [25, 15, 20, 35, 38, 20, 12, 9, 32, 21, 18, 32],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1,
+        backgroundColor: 'rgba(127, 232, 229, 0.2)',
         borderRadius: 20,
         borderSkipped: false,
         barPercentage: 0.5,
@@ -92,9 +90,7 @@ const myChart = new Chart(ctx, {
       {
         label: 'Completed tasks',
         data: [15, 8, 15, 22, 11, 10, 8, 3, 15, 11, 15, 20],
-        backgroundColor: 'rgba(192, 75, 192, 0.2)',
-        borderColor: 'rgba(192, 75, 192, 1)',
-        borderWidth: 1,
+        backgroundColor: 'rgba(72, 99, 224, 0.3)',
         borderRadius: 20,
         borderSkipped: false,
         barPercentage: 0.5,
@@ -104,12 +100,23 @@ const myChart = new Chart(ctx, {
   },
   options: {
     responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        align: 'end',
+        labels: {
+          usePointStyle: true,
+          pointStyle: 'rectRounded'
+        },
+      },
+    },
     scales: {
       x: {
-        stacked: true,
+        stacked: true, // make them on top of each other
         display: true,
         grid: {
-          display: false
+          display: false // hide the x axis grid line
         }
       },
       y: {

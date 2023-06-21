@@ -5,9 +5,9 @@
     <link rel="icon" type="image/x-icon" href="./assets/flow-logo.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
     <link href="dist/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
-    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="grid grid-cols-[16rem_auto_23rem]">
 
       <!-- sidebar -->
-      <aside class="h-screen border-r border-gray-100 w-full px-8 rounded-lg sticky">
+      <aside class="h-screen w-72 lg:w-full px-8 rounded-lg">
         <div class="flex flex-col h-full relative">
           <div class="flex flex-row items-center justify-center my-16">
             <img src="./assets/flow-logo.png" alt="logo" class="w-7 h-7 rotate-45"/>
@@ -26,104 +26,107 @@
           <div class="flex flex-col gap-2">
             <a href="#" class="h-14 items-center bg-colorScheme2 flex flex-row gap-2 rounded-lg text-tertiary">
               <span class="ml-4"><i data-feather="layout" class="w-6 h-6"></i></span>
-              <h3 class="text-base font-medium">Dashboard</h3>
+              <h3 class="text-base font-medium md:hidden lg:block">Dashboard</h3>
             </a>
             <a href="#" class="h-14 items-center flex flex-row gap-2 text-secondary hover:text-tertiary">
               <span class="ml-4"><i data-feather="calendar" class="w-6 h-6"></i></span>
-              <h3 class="text-base">Calendar</h3>
+              <h3 class="text-base md:hidden lg:block">Calendar</h3>
             </a>
             <a href="#" class="h-14 items-center flex flex-row gap-2 text-secondary hover:text-tertiary">
               <span class="ml-4"><i data-feather="clock" class="w-6 h-6"></i></span>
-              <h3 class="text-base">Insights</h3>
+              <h3 class="text-base md:hidden lg:block">Insights</h3>
             </a>
             <a href="#" class="h-14 items-center flex flex-row gap-2 text-secondary hover:text-tertiary">
               <span class="ml-4"><i data-feather="edit-3" class="w-6 h-6"></i></span>
-              <h3 class="text-base">Messages</h3>
+              <h3 class="text-base md:hidden lg:block">Messages</h3>
             </a>
             <a href="#" class="h-14 items-center flex flex-row gap-2 text-secondary hover:text-tertiary">
               <span class="ml-4"><i data-feather="settings" class="w-6 h-6"></i></span>
-              <h3 class="text-base">Settings</h3>
+              <h3 class="text-base md:hidden lg:block">Settings</h3>
             </a>
             <a href="#" class="h-14 items-center absolute bottom-8 flex flex-row gap-2 text-secondary hover:text-tertiary">
               <span class="ml-4"><i data-feather="log-out" class="w-6 h-6"></i></span>
-              <h3 class="text-base">Logout</h3>
+              <h3 class="text-base md:hidden lg:block">Logout</h3>
             </a>
           </div>
 
         </div>
       </aside>
 
-      <main class="grid grid-cols-2 grid-rows-[6rem_18rem_1fr] bg-[#F7F8FA] px-8 py-14 gap-4">
+      <main class="bg-[#F7F8FA] px-8 py-14 gap-4">
         <!-- header -->
-        <div class="col-span-full">
+        <div class="">
           <h1 class="text-primary text-5xl mb-3 font-semibold">Hey, Yusei!</h1>
           <p class="text-sm text-secondary">You have <span class="font-bold">3</span> tasks for today and <span class="font-bold">12</span> tasks for this week.</p>
         </div>
 
         <!-- tasks box -->
-        <div class="bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
-          <div class="flex flex-row items-center justify-between border-b border-b-slate-200 p-1">
-            <h2 class="font-semibold text-2xl text-primary">Today's task</h2>
-            <p class="text-sm text-secondary">All task</p>
-          </div>
-
-          <ul class="flex flex-col gap-4 mt-5">
-            <li class="flex flex-row justify-between">
-              <div>
-                <h5 class="text-primary">Dashboard design</h5>
-                <p class="text-sm text-secondary">In Visux Studio</p>
-              </div>
-              <label class="inline-flex items-center">
-                <input type="checkbox" class="appearance-none w-4 h-4 rounded-md focus:outline-none checked:bg-tertiary border-2 border-tertiary">
-              </label>
-            </li>
-            <li class="flex flex-row justify-between">
-              <div>
-                <h5 class="text-primary">Medical LP</h5>
-                <p class="text-sm text-secondary">In DobreGeny</p>
-              </div>
-              <label class="inline-flex items-center">
-                <input type="checkbox" class="form-checkbox text-primary">
-              </label>
-            </li>
-            <li class="flex flex-row justify-between">
-              <div>
-                <h5 class="text-primary">Develop the header</h5>
-                <p class="text-sm text-secondary">In Mirex dev team</p>
-              </div>
-              <label class="inline-flex items-center">
-                <input type="checkbox" class="form-checkbox text-primary">
-              </label>
-            </li>
-
-          </ul>
-        </div>
-
-        <!-- meetings box -->
-        <div class="bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
-          <div class="flex flex-row items-center justify-between p-1">
-            <h2 class="font-semibold text-2xl text-primary">Today's meetings</h2>
-            <span class="cursor-pointer"><i data-feather="plus" class="w-4 h-4 text-tertiary stroke-[3]"></i></span>
-          </div>
-
-          <div class="flex flex-col gap-2 mt-4">
-            <div class="relative flex flex-col bg-colorScheme1 rounded-lg p-3">
-              <span class="absolute top-4 right-2 cursor-pointer"><i data-feather="more-vertical" class="text-secondary w-4 h-4"></i></span>
-              <p class="text-sm text-secondary">2.30 p.m - 3.00 p.m.</p>
-              <h5 class="font-semibold text-md text-primary">Meeting with Minji</h5>
-              <p class="text-sm text-secondary">Discuss project progress</p>
+        <div class="flex flex-row py-5 gap-4">
+          <div class=" w-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
+            <div class="flex flex-row items-center justify-between border-b border-b-slate-200 p-1">
+              <h2 class="font-semibold text-2xl text-primary">Today's task</h2>
+              <p class="text-sm text-secondary">All task</p>
             </div>
-            <div class="relative flex flex-col bg-colorScheme2 rounded-lg p-3">
-              <span class="absolute top-4 right-2 cursor-pointer"><i data-feather="more-vertical" class="text-secondary w-4 h-4"></i></span>
-              <p class="text-sm text-secondary">4.30 p.m - 5.20 p.m.</p>
-              <h5 class="font-semibold text-md text-primary">Meeting with dev team</h5>
-              <p class="text-sm text-secondary">Discuss tasks for the next week</p>
+
+            <ul class="flex flex-col gap-4 mt-5">
+              <li class="flex flex-row justify-between">
+                <div>
+                  <h5 class="text-primary">Dashboard design</h5>
+                  <p class="text-sm text-secondary">In Visux Studio</p>
+                </div>
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="checkbox">
+                </label>
+              </li>
+              <li class="flex flex-row justify-between">
+                <div>
+                  <h5 class="text-primary">Medical LP</h5>
+                  <p class="text-sm text-secondary">In DobreGeny</p>
+                </div>
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="checkbox">
+                </label>
+              </li>
+              <li class="flex flex-row justify-between">
+                <div>
+                  <h5 class="text-primary">Develop the header</h5>
+                  <p class="text-sm text-secondary">In Mirex dev team</p>
+                </div>
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="checkbox">
+                </label>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- meetings box -->
+          <div class="w-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
+            <div class="flex flex-row items-center justify-between p-1">
+              <h2 class="font-semibold text-2xl text-primary">Today's meetings</h2>
+              <span class="cursor-pointer"><i data-feather="plus" class="w-4 h-4 text-tertiary stroke-[3]"></i></span>
+            </div>
+
+            <div class="flex flex-col gap-2 mt-4">
+              <div class="relative flex flex-col bg-colorScheme1 rounded-lg p-3">
+                <span class="absolute top-4 right-2 cursor-pointer"><i data-feather="more-vertical" class="text-secondary w-4 h-4"></i></span>
+                <p class="text-sm text-secondary">2.30 p.m - 3.00 p.m.</p>
+                <h5 class="font-semibold text-md text-primary">Meeting with Minji</h5>
+                <p class="text-sm text-secondary">Discuss project progress</p>
+              </div>
+              <div class="relative flex flex-col bg-colorScheme2 rounded-lg p-3">
+                <span class="absolute top-4 right-2 cursor-pointer"><i data-feather="more-vertical" class="text-secondary w-4 h-4"></i></span>
+                <p class="text-sm text-secondary">4.30 p.m - 5.20 p.m.</p>
+                <h5 class="font-semibold text-md text-primary">Meeting with dev team</h5>
+                <p class="text-sm text-secondary">Discuss tasks for the next week</p>
+              </div>
             </div>
           </div>
+
         </div>
 
         <!-- chart box -->
-        <div class="col-span-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
+        <div class="bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
           <h2 class="font-semibold text-2xl text-primary">Tasks</h2>
           <canvas id="taskChart"></canvas>
         </div>
@@ -131,18 +134,20 @@
       </main>
 
       <!-- right side -->
-      <div class="grid grid-cols-1 grid-rows-[2.8rem_1fr_1fr] gap-4 px-8 py-14">
+      <div class="flex flex-col px-8 py-14">
         <!-- top -->
-        <div class="flex flex-row items-center justify-between w-full">
+        <div class="flex flex-row items-center gap-3 w-full h-11 mb-5">
           <div class="flex flex-row justify-center h-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-3 cursor-pointer">
             <span class="flex flex-row items-center"><i data-feather="search" class="w-4 h-4 text-tertiary stroke-[3]"></i></span>
           </div>
-          <div class="flex flex-row justify-center h-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg w-fit pl-2 pr-5 cursor-pointer">
-            <p class="flex flex-row gap-2 items-center text-tertiary"><span class=""><i data-feather="plus" class="w-4 h-4 stroke-[3]"></i></span>Add task</p>
+          <div class="flex flex-row justify-center h-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg w-fit pl-2 pr-3 cursor-pointer w-40">
+            <p class="flex flex-row gap-2 items-center text-tertiary">
+              <span class=""><i data-feather="plus" class="w-full h-4 stroke-[3]"></i></span>
+              Add task</p>
           </div>
-          <div class="flex flex-row gap-2 h-full">
+          <div class="flex flex-row gap-2 h-full w-40">
             <div class="flex flex-row items-center">
-              <img src="assets/profile-img.jpeg" alt="profile" class="rounded-lg h-full">
+              <img src="assets/profile-img.jpeg" alt="profile" class="object-cover rounded-lg h-full">
             </div>
             <div class="flex flex-col my-auto">
               <h5 class="font-semibold text-sm">Yusei</h5>
@@ -152,7 +157,7 @@
         </div>
 
         <!-- calendar -->
-        <div class="w-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5">
+        <div class="w-full bg-white shadow-[#eff0fb] border border-[#eff0fb] rounded-lg shadow-lg px-4 py-5 my-5">
           <header class="flex items-center justify-between">
             <div class="icons flex justify-center">
               <span id="prev" class="mr-4 select-none"><i data-feather="chevron-left" class="w-6 h-6 text-tertiary cursor-pointer"></i></span></i></span>
@@ -196,7 +201,7 @@
             <div class="flex flex-row gap-3 border-b border-b-slate-200 p-2">
               <!-- pfp -->
               <div class="w-11 h-11">
-                <img src="assets/profile-img.jpeg" alt="profile" class="rounded-lg h-full w-full">
+                <img src="assets/hanni.jpeg" alt="profile" class="object-cover rounded-lg h-full w-full">
               </div>
               <!-- info -->
               <div class="flex flex-col">
@@ -209,11 +214,11 @@
             <div class="flex flex-row gap-3 border-b border-b-slate-200 p-2">
               <!-- pfp -->
               <div class="w-11 h-11">
-                <img src="assets/profile-img.jpeg" alt="profile" class="rounded-lg h-full w-full">
+                <img src="assets/minji.jpeg" alt="profile" class="object-cover rounded-lg h-full w-full">
               </div>
               <!-- info -->
               <div class="flex flex-col">
-                <h5 class="font-semibold text-primary">Danielle</h5>
+                <h5 class="font-semibold text-primary">Minji</h5>
                 <p class="text-sm text-secondary">Upload cover</p>
                 <h5 class="text-tertiary text-sm font-semibold">View</h5>
               </div>
@@ -222,7 +227,7 @@
             <div class="flex flex-row gap-3 p-2">
               <!-- pfp -->
               <div class="w-11 h-11">
-                <img src="assets/profile-img.jpeg" alt="profile" class="rounded-lg h-full w-full">
+                <img src="assets/haerin.jpeg" alt="profile" class="object-cover rounded-lg h-full w-full">
               </div>
               <!-- info -->
               <div class="flex flex-col">
