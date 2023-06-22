@@ -1,13 +1,35 @@
 // feather icon
 feather.replace();
 
-// notification toggle
-// const checkbox = document.querySelector('#toggle');
-// const html = document.querySelector('html');
-//
-// checkbox.addEventListener('click', () => {
-//   checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
-// })
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+  document.body.style.overflow = '';
+}
+
+
+// menu toggle
+const sideMenu = document.querySelector("aside");
+const menuBtn = document.querySelector("#open-btn");
+const closeBtn = document.querySelector("#close-btn");
+
+menuBtn.addEventListener('click', () => {
+  // hide menu
+  menuBtn.classList.add('hidden');
+  // display close
+  closeBtn.classList.remove('hidden');
+  sideMenu.classList.remove('hidden');
+  disableScroll();
+})
+
+closeBtn.addEventListener('click', () => {
+  menuBtn.classList.remove('hidden');
+  closeBtn.classList.add('hidden');
+  sideMenu.classList.add('hidden');
+  enableScroll();
+})
 
 
 // calendar

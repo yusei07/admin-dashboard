@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  [type='checkbox'],
-  [type='radio'] {
-    @apply rounded border-gray-300 text-tertiary focus:ring-indigo-500;
+  [type='checkbox'] {
+    @apply w-4 h-4 checked:bg-tertiary rounded-md border border-tertiary focus:ring-0;
   }
 }
 
@@ -19,7 +18,7 @@
   }
 
   .cal-day-li-before {
-    @apply before:absolute before:content-[''] before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:rounded-lg before:transform before:translate-x-[-50%] before:translate-y-[-50%] hover:before:bg-tertiary before:z-[-1];
+    @apply before:absolute before:content-[''] before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:rounded-lg before:transform before:translate-x-[-50%] before:translate-y-[-50%] hover:before:bg-[#EBEEFD] before:z-[-1];
   }
 
   .inactive-day {
